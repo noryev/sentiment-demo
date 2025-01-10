@@ -1,8 +1,8 @@
 {
     "machine": {
-        "gpu": 0,          // CPU only module
-        "cpu": 1000,       // 1 CPU core
-        "ram": 4000        // 4GB RAM
+        "gpu": 0,
+        "cpu": 1000,
+        "ram": 4000
     },
     "job": {
         "APIVersion": "V1beta1",
@@ -16,7 +16,7 @@
                 "EnvironmentVariables": [
                     {{ if .input_text }}"INPUT_TEXT={{ js .input_text }}"{{ else }}"INPUT_TEXT=Default text for analysis"{{ end }}
                 ],
-                "Image": "your-dockerhub-username/sentiment-demo:latest"
+                "Image": "noryev/sentiment-demo:latest"
             },
             "Engine": "Docker",
             "Network": {
